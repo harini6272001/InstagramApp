@@ -11,11 +11,14 @@ import AlamofireImage
 
 class FeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    
+    let myRefreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
     var posts=[PFObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        myRefreshControl.addTarget(self,action: #selector(viewDidAppear),for:.valueChanged)
+        tableView.refreshControl = myRefreshControl
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -33,6 +36,7 @@ class FeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             if posts != nil{
                 self.posts=posts!
                 self.tableView.reloadData()
+                self.myRefreshControl.endRefreshing()
             }
             
         }
