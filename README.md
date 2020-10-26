@@ -14,10 +14,13 @@ The following **required** functionality is completed:
 - [x] User can take a photo, add a caption, and post it to the server. (3pt)
 - [x] User can view the last 20 posts. (4pts)
 
+The following **bonus** features are implemented:
+
+- [x] User can pull to refresh. (1pt)
 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/Ajq5F8LnWB.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
